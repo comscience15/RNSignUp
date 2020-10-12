@@ -18,6 +18,8 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* signupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* signupTests.m */; };
 		391917A9E8AB087FA0AC9E27 /* libPods-signup-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1135AB511526A98FE172CFF9 /* libPods-signup-tvOS.a */; };
+		3929BE3A2533BE9C00A963DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3929BE392533BE9C00A963DD /* GoogleService-Info.plist */; };
+		3929BE7C2533C28C00A963DD /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D6AB178AEC49D0DCE5D25817 /* libPods-signup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8527CCA1D1A5328997B29558 /* libPods-signup.a */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = signup/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* signup-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "signup-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* signup-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "signup-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		392621062533C9B700553731 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		3929BE392533BE9C00A963DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FC64B9C7371732375C7B846 /* Pods-signup-signupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signup-signupTests.debug.xcconfig"; path = "Target Support Files/Pods-signup-signupTests/Pods-signup-signupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5250A8C7BC28A2766AB0D144 /* Pods-signup-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signup-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-signup-tvOSTests/Pods-signup-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		63AE753E6E9C37F018F16DDB /* Pods-signup-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signup-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-signup-tvOS/Pods-signup-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				3929BE392533BE9C00A963DD /* GoogleService-Info.plist */,
 			);
 			name = signup;
 			sourceTree = "<group>";
@@ -148,7 +153,6 @@
 				5250A8C7BC28A2766AB0D144 /* Pods-signup-tvOSTests.debug.xcconfig */,
 				C58AF132D5C0802EEF9F01CE /* Pods-signup-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +179,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				392621062533C9B700553731 /* main.jsbundle */,
 				13B07FAE1A68108700A75B9A /* signup */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* signupTests */,
@@ -294,6 +299,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 7D63JCQL4S;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -340,8 +346,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3929BE7C2533C28C00A963DD /* main.jsbundle in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				3929BE3A2533BE9C00A963DD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +383,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		04B20DF2AA15F1FF121346ED /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -656,7 +664,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = signup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -679,6 +689,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7D63JCQL4S;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = signup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
